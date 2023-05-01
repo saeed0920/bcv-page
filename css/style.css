@@ -23,7 +23,30 @@ tab-big
 
 big-desktop
 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  padding: 2rem 4rem;
+  border-bottom: 1px solid #374151;
+  z-index: 9; }
+
 /* animation */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-column: 1 / -1; }
+
+.header__partner {
+  transform: translateY(-50%); }
+  .header__partner span {
+    top: 0;
+    transform: translateY(-100%);
+    position: absolute;
+    padding: 0.4rem 2rem 0; }
+
 *,
 *::after,
 *::before {
@@ -36,4 +59,8 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr; }
+  body > * {
+    grid-column: 2 / 3; }

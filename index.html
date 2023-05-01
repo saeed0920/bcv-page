@@ -7,5 +7,109 @@
     <link rel="stylesheet" href="./css/output.css" />
     <title>bcv</title>
   </head>
-  <body class="grid"></body>
+  <body class="bg-[#1d222f]">
+    <section class="navbar flex items-center justify-around">
+      <h1 class="text-white font-bold text-[3.6rem]">BDCV22</h1>
+      <ul
+        class="flex item-center text-[1.8rem] text-[#ababab] gap-12 [&>*:hover]:text-[#cdcfd3]"
+      >
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Features</a>
+        </li>
+        <li>
+          <a href="">Team</a>
+        </li>
+        <li>
+          <a href="">Roadmap</a>
+        </li>
+        <li>
+          <a href="">Faq</a>
+        </li>
+      </ul>
+
+      <div class="flex item-center text-[1.8rem] gap-16">
+        <button class="text-white">Sign In</button>
+        <button
+          class="bg-white text-[#222737] py-[1.6rem] px-[4rem] rounded-3xl hover:bg-[#65e6cf] transition"
+        >
+          Sign Up
+        </button>
+      </div>
+    </section>
+
+    <header class="layout bg-[#222737] py-[20rem] relative">
+      <div class="flex items-start justify-between col-start-2">
+        <div class="flex flex-col items-start gap-16">
+          <h1 class="text-white text-[7.2rem] leading-[7.2rem] pb-4">
+            Start your crypto <br />
+            trading here.
+          </h1>
+          <p class="text-[#ababab] text-[2rem]">
+            The most trusted and top crypto trading platform with a simple
+            <br />
+            transaction flow
+          </p>
+
+          <div
+            class="flex items-center gap-8 [&>a]:w-[3rem] [&>a]:h-[3rem] [&>a>img]:w-full"
+          >
+            <a href="#"><img src="./img/telegram.svg" alt="telegram" /></a>
+            <a href="#"><img src="./img/people.svg" alt="people" /></a>
+            <a href="#"><img src="img/tw.svg" alt="twitter" /></a>
+            <a href="#"><img src="./img/youtube.svg" alt="youtube" /></a>
+            <a href="#"><img src="./img/tiktok.svg" alt="tiktok" /></a>
+          </div>
+          <div class="flex items-center gap-16 text-[1.8rem]">
+            <button
+              class="bg-[#65e6cf] text-[#222737] rounded-3xl py-[1.6rem] px-[6.4rem]"
+            >
+              Get Started
+            </button>
+            <button class="text-white">Learn more &rarr;</button>
+          </div>
+          <div
+            class="flex items-center gap-20 [&>*>h1]:text-[3.6rem] [&>*>h2]:text-[2.4rem] [&>*>h1]:text-[#65e6cf] [&>*>h2]:text-white"
+          >
+            <div class="flex flex-col items-start">
+              <h1>20+</h1>
+              <h2>Wallet Types</h2>
+            </div>
+            <div class="flex flex-col items-start">
+              <h1>2000+</h1>
+              <h2>Active Users</h2>
+            </div>
+            <div class="flex flex-col items-start">
+              <h1>10M+</h1>
+              <h2>Transactions</h2>
+            </div>
+          </div>
+        </div>
+        <img src="./img/phone.png" alt="phone" />
+      </div>
+    </header>
+    <div
+      class="header__partner flex justify-center gap-8 bg-[#31394f] rounded-lg py-[4rem] px[6.4rem]"
+    >
+      <span
+        class="text-[#cdcfd3] text-[1.6rem] relative bg-[#31394f] rounded-md"
+        >PARTNERS</span
+      >
+      <picture
+        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center"
+      >
+        <img class="w-[16rem] h-[4rem]" src="./img/hotbit.png" />
+      </picture>
+      <picture
+        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center"
+      >
+        <img class="w-[16rem] h-[4rem]" src="./img/bkex.png" />
+      </picture>
+    </div>
+  </body>
 </html>

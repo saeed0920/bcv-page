@@ -12,7 +12,11 @@ html {
 
 body {
   font-family: sans-serif;
-}
 
-::selection {
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+
+  & > * {
+    grid-column: 2 / 3;
+  }
 }

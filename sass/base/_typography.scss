@@ -1,0 +1,15 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-column: 1 / -1;
+}
+
+.header__partner {
+  transform: translateY(-50%);
+  span {
+    top: 0;
+    transform: translateY(-100%);
+    position: absolute;
+    padding: 0.4rem 2rem 0;
+  }
+}

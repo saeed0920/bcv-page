@@ -1,0 +1,10 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  padding: 2rem 4rem;
+  border-bottom: 1px solid #374151;
+  z-index: 9;
+}
