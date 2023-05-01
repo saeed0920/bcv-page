@@ -14,13 +14,13 @@
         class="flex item-center text-[1.8rem] text-[#ababab] gap-12 [&>*:hover]:text-[#cdcfd3]"
       >
         <li>
-          <a href="">Home</a>
+          <a href="#home">Home</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="">Features</a>
+          <a href="#feature">Features</a>
         </li>
         <li>
           <a href="">Team</a>
@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <header class="layout bg-[#222737] py-[20rem] relative">
+    <header class="layout bg-[#222737] py-[20rem] relative" id="home">
       <div class="flex items-start justify-between col-start-2">
         <div class="flex flex-col items-start gap-16">
           <h1 class="text-white text-[7.2rem] leading-[7.2rem] pb-4">
@@ -111,5 +111,100 @@
         <img class="w-[16rem] h-[4rem]" src="./img/bkex.png" />
       </picture>
     </div>
+
+    <section
+      class="about flex items-center gap-16 justify-center py-[22rem]"
+      id="about"
+    >
+      <video src="./" class="p-12 w-1/2 rounded-3xl" controls></video>
+      <div class="flex flex-col items-start justify-center w-1/2 gap-8">
+        <h1 class="text-bcvGreen text-[2rem]">ABOUT US</h1>
+        <h2 class="text-white text-[3.6rem]">WHAT IS BDCV22?</h2>
+        <p class="text-bcvGray text-[2rem] leading-10">
+          ICOLAND offers music artists the ability to connect with each other
+          along with investors and digitally exchange NFTs for their creations
+          within a sustainable and powerful tokenomics system running on the
+          blockchain, giving access to a world of opportunities for those with a
+          passion tied to the entertaining values of music and performance arts.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature layout bg-[#222737] py-20" id="feature">
+      <div class="flex flex-col justify-center items-center col-start-2">
+        <h2 class="text-bcvGreen text-[2rem]">FEATURES</h2>
+        <h2 class="text-white text-[3.6rem] mb-36">OUR KEY FEATURE</h2>
+        <div class="flex justify-between gap-8">
+          <div
+            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+          >
+            <div
+              class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
+            >
+              <img src="./img/security safe.svg" class="-rotate-45 w-16 h-16" />
+            </div>
+            <h1 class="text-white text-[2rem]">
+              Reliable, tamper-proof network
+            </h1>
+            <p class="text-bcvGray text-[1.8rem]">
+              Use decentralization, trusted nodes, premium data, and
+              cryptographic proofs to connect highly accurate and available
+              data/APIs to any smart contract.
+            </p>
+            <button class="text-white text-[1.6rem]">See Details &rarr;</button>
+          </div>
+          <div
+            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+          >
+            <div
+              class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
+            >
+              <img src="./img/code.svg" class="-rotate-45 w-16 h-16" />
+            </div>
+            <h1 class="text-white text-[2rem]">
+              Seamless connection to any API
+            </h1>
+            <p class="text-bcvGray text-[1.8rem]">
+              Build on a flexible framework that we can retrieve data from any
+              API, connect with existing systems, and integrate with any current
+              or future blockchain.
+            </p>
+            <button class="text-white text-[1.6rem]">See Details &rarr;</button>
+          </div>
+          <div
+            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+          >
+            <div
+              class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
+            >
+              <img src="./img/lamp charge.svg" class="-rotate-45 w-16 h-16" />
+            </div>
+            <h1 class="text-white text-[2rem]">Proven, ready-made solutions</h1>
+            <p class="text-bcvGray text-[1.8rem]">
+              Integrate pre-built, time-tested oracle solutions that already
+              secure tens of billions in smart contract value for market-leading
+              decentralized applications.
+            </p>
+            <button class="text-white text-[1.6rem]">See Details &rarr;</button>
+          </div>
+          <div
+            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+          >
+            <div
+              class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
+            >
+              <img src="./img/key.svg" class="-rotate-45 w-16 h-16" />
+            </div>
+            <h1 class="text-white text-[2rem]">Secure off-chain computation</h1>
+            <p class="text-bcvGray text-[1.8rem]">
+              Use a decentralized network of ICOland Keeper nodes to automate
+              contracts, mitigating risk of manual interventions, and a bunch of
+              centralized servers.
+            </p>
+            <button class="text-white text-[1.6rem]">See Details &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

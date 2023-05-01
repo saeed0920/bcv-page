@@ -13,3 +13,12 @@
     padding: 0.4rem 2rem 0;
   }
 }
+
+.card {
+  border: solid 1px transparent;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.05);
+    border-color: rgb(101, 230, 207);
+  }
+}
