@@ -54,6 +54,22 @@ big-desktop
     transform: scale(1.05);
     border-color: #65e6cf; }
 
+.q {
+  position: relative; }
+  .q::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: #65e6cf;
+    border-radius: 200vmax; }
+
+.q-gray::after {
+  background-color: #ababab; }
+
 *,
 *::after,
 *::before {
