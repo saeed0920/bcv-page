@@ -42,3 +42,22 @@
     background-color: #ababab;
   }
 }
+
+li {
+  transition: all 0.2s;
+  position: relative;
+  &:has(.active) {
+    transition: all 0.2s;
+    &::after {
+      content: "";
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: #65e6cf;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+}

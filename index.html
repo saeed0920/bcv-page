@@ -14,22 +14,22 @@
         class="flex item-center text-[1.8rem] text-[#ababab] gap-12 [&>*:hover]:text-[#cdcfd3]"
       >
         <li>
-          <a href="#home">Home</a>
+          <a class="nav-link" href="#home">Home</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li>
-          <a href="#feature">Features</a>
+          <a class="nav-link" href="#feature">Features</a>
         </li>
         <li>
-          <a href="#team">Team</a>
+          <a class="nav-link" href="#team">Team</a>
         </li>
         <li>
-          <a href="#roadmap">Roadmap</a>
+          <a class="nav-link" href="#roadmap">Roadmap</a>
         </li>
         <li>
-          <a href="#faq">Faq</a>
+          <a class="nav-link" href="#faq">Faq</a>
         </li>
       </ul>
 
@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <header class="layout bg-[#222737] py-[20rem] relative" id="home">
+    <section class="layout bg-[#222737] py-[20rem] relative" id="home">
       <div class="flex items-start justify-between col-start-2">
         <div class="flex flex-col items-start gap-16">
           <h1 class="text-white text-[7.2rem] leading-[7.2rem] pb-4">
@@ -92,7 +92,7 @@
         </div>
         <img src="./img/phone.png" alt="phone" />
       </div>
-    </header>
+    </section>
     <div
       class="header__partner flex justify-center gap-8 bg-[#31394f] rounded-lg py-[4rem] px[6.4rem]"
     >
@@ -570,6 +570,30 @@
           }
         }
       }
+    </script>
+    <script>
+      window.addEventListener("scroll", function (event) {
+        let sections = document.querySelectorAll("section");
+        let navLinks = document.querySelectorAll(".nav-link");
+
+        sections.forEach(function (section) {
+          let top = section.offsetTop;
+          let height = section.offsetHeight;
+
+          if (window.pageYOffset >= top && window.pageYOffset < top + height) {
+            navLinks.forEach(function (navLink) {
+              if (
+                navLink.getAttribute("href") ===
+                "#" + section.getAttribute("id")
+              ) {
+                navLink.classList.add("active");
+              } else {
+                navLink.classList.remove("active");
+              }
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
