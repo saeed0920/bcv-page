@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Hahmlet:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,10 +36,70 @@ big-desktop
   z-index: 9; }
 
 /* animation */
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-8rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes load {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes to-up {
+  from {
+    transform: translateY(10rem);
+    opacity: 0; }
+  to {
+    transform: translateY(1rem);
+    opacity: 1; } }
+
+.load {
+  animation: load 2s ease-out forwards; }
+
+.down-up {
+  animation: to-up 1s forwards ease-in; }
+
+.left-to-right {
+  animation: left-to-right 1s ease-in; }
+
+.delay50 {
+  animation-delay: 50ms; }
+
+.delay100 {
+  animation-delay: 100ms; }
+
+.delay150 {
+  animation-delay: 150ms; }
+
+.delay200 {
+  animation-delay: 200ms; }
+
+.delay250 {
+  animation-delay: 250ms; }
+
+.delay300 {
+  animation-delay: 300ms; }
+
+.opacity-100,
+.translate-y-o {
+  opacity: 1;
+  transform: translateY(0rem); }
+
 .layout {
   display: grid;
-  grid-template-columns: 1fr 70% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   grid-column: 1 / -1; }
+  @media only screen and (max-width: 93.75em) {
+    .layout {
+      grid-template-columns: 1fr 70% 1fr; } }
+  @media only screen and (max-width: 56.25em) {
+    .layout {
+      grid-template-columns: 1fr 90% 1fr; } }
 
 .header__partner {
   transform: translateY(-50%); }
@@ -66,6 +128,15 @@ big-desktop
     height: 2rem;
     background-color: #65e6cf;
     border-radius: 200vmax; }
+  @media only screen and (max-width: 900px) {
+    .q:first-child::before {
+      content: "";
+      position: absolute;
+      background-color: #65e6cf;
+      width: 50%;
+      left: 0;
+      top: 0;
+      height: 1px; } }
 
 .q-gray::after {
   background-color: #ababab; }
@@ -85,6 +156,15 @@ li {
       background-color: #65e6cf;
       position: absolute;
       border-radius: 50%; }
+      @media only screen and (max-width: 900px) {
+        li:has(.active)::after {
+          display: none; } }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Hahmlet"; }
 
 *,
 *::after,
@@ -97,10 +177,34 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 93.75em) {
+    html {
+      font-size: 58%; } }
+  @media only screen and (max-width: 81.25em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 52%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  font-family: sans-serif;
+  font-family: "Poppins";
   display: grid;
-  grid-template-columns: 1fr 70% 1fr; }
+  grid-template-columns: 1fr 80% 1fr; }
+  @media only screen and (max-width: 93.75em) {
+    body {
+      grid-template-columns: 1fr 70% 1fr; } }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      grid-template-columns: 1fr 90% 1fr; } }
   body > * {
     grid-column: 2 / 3; }
+
+.font-1 {
+  font-family: "Poppins"; }
+
+.font-2 {
+  font-family: "Hahmlet"; }

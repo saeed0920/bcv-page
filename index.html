@@ -8,10 +8,28 @@
     <title>bcv</title>
   </head>
   <body class="bg-[#1d222f]">
-    <section class="navbar flex items-center justify-around">
+    <section
+      class="navbar flex items-center justify-around tab:justify-between tab:px-[10rem] phone:px-16"
+    >
       <h1 class="text-white font-bold text-[3.6rem]">BDCV22</h1>
+      <label class="hidden tab:block w-[3.6rem] h-[3.6rem]">
+        <input class="peer check-navbar hidden" type="checkbox" />
+        <img
+          class="peer-checked:hidden w-full h-full filter invert"
+          src="./img/icon-navbar-close.svg"
+        />
+        <img
+          class="hidden peer-checked:block w-full h-full filter invert"
+          src="./img/icon-navbar-open.svg"
+        />
+
+        <span
+          class="overlay hidden fixed w-full h-[100vh] z-[8] top-[100%] left-0 tab:peer-checked:block bg-black/50"
+        ></span>
+      </label>
       <ul
-        class="flex item-center text-[1.8rem] text-[#ababab] gap-12 [&>*:hover]:text-[#cdcfd3]"
+        id="nav-list"
+        class="flex item-center text-[1.8rem] origin-right text-[#ababab] gap-12 [&>*:hover]:text-[#cdcfd3] tab:fixed tab:peer-checked:scale-x-100 tab:scale-x-0 tab:bg-[#222737] tab:right-0 top-[100%] z-[10] tab:h-[100vh] tab:w-[60%] tab:flex-col tab:p-10 tab:text-[2rem] tab:text-white transition-transform"
       >
         <li>
           <a class="nav-link" href="#home">Home</a>
@@ -33,7 +51,7 @@
         </li>
       </ul>
 
-      <div class="flex item-center text-[1.8rem] gap-16">
+      <div class="flex item-center text-[1.8rem] gap-16 tab:hidden">
         <button class="text-white">Sign In</button>
         <button
           class="bg-white text-[#222737] py-[1.6rem] px-[4rem] rounded-3xl hover:bg-[#65e6cf] transition"
@@ -44,28 +62,48 @@
     </section>
 
     <section class="layout bg-[#222737] py-[20rem] relative" id="home">
-      <div class="flex items-start justify-between col-start-2">
+      <img
+        src="./img/img-1.svg"
+        class="absolute top-0 z-0 left-20 tab:left-0"
+      />
+      <div
+        class="flex items-start justify-around col-start-2 tab:flex tab:flex-col tab:items-center tab:text-center"
+      >
         <div class="flex flex-col items-start gap-16">
-          <h1 class="text-white text-[7.2rem] leading-[7.2rem] pb-4">
+          <h1
+            class="text-white text-[7.2rem] leading-[7.2rem] pb-4 left-to-right delay50 phone:text-[5rem] tab:self-center"
+          >
             Start your crypto <br />
             trading here.
           </h1>
-          <p class="text-[#ababab] text-[2rem]">
+          <p class="text-[#ababab] text-[2rem] left-to-right delay100">
             The most trusted and top crypto trading platform with a simple
             <br />
             transaction flow
           </p>
 
           <div
-            class="flex items-center gap-8 [&>a]:w-[3rem] [&>a]:h-[3rem] [&>a>img]:w-full"
+            class="flex items-center gap-8 [&>a]:w-[3rem] [&>a]:h-[3rem] [&>a>img]:w-full tab:self-center left-to-right delay150"
           >
-            <a href="#"><img src="./img/telegram.svg" alt="telegram" /></a>
-            <a href="#"><img src="./img/people.svg" alt="people" /></a>
-            <a href="#"><img src="img/tw.svg" alt="twitter" /></a>
-            <a href="#"><img src="./img/youtube.svg" alt="youtube" /></a>
-            <a href="#"><img src="./img/tiktok.svg" alt="tiktok" /></a>
+            <a href="https://t.me/BDCV22Ann"
+              ><img src="./img/telegram.svg" alt="telegram"
+            /></a>
+            <a href="https://t.me/BDCV22"
+              ><img src="./img/people.svg" alt="people"
+            /></a>
+            <a href="https://twitter.com/BDCV22?t=AdIalsrapcHYjvcseXC3cA&s=09"
+              ><img src="img/tw.svg" alt="twitter"
+            /></a>
+            <a href="https://www.youtube.com/channel/UCzX5SajhkLWrMH2xNjkBWUw"
+              ><img src="./img/youtube.svg" alt="youtube"
+            /></a>
+            <a href="https://www.tiktok.com/@BDCV22"
+              ><img src="./img/tiktok.svg" alt="tiktok"
+            /></a>
           </div>
-          <div class="flex items-center gap-16 text-[1.8rem]">
+          <div
+            class="flex items-center gap-16 text-[1.8rem] tab:pb-[4rem] tab:self-center left-to-right delay-120 delay200"
+          >
             <button
               class="bg-[#65e6cf] text-[#222737] rounded-3xl py-[1.6rem] px-[6.4rem]"
             >
@@ -74,7 +112,7 @@
             <button class="text-white">Learn more &rarr;</button>
           </div>
           <div
-            class="flex items-center gap-20 [&>*>h1]:text-[3.6rem] [&>*>h2]:text-[2.4rem] [&>*>h1]:text-[#65e6cf] [&>*>h2]:text-white"
+            class="flex items-center gap-20 [&>*>h1]:text-[3.6rem] [&>*>h2]:text-[2.4rem] [&>*>h1]:text-[#65e6cf] [&>*>h2]:text-white tab:hidden left-to-right delay250"
           >
             <div class="flex flex-col items-start">
               <h1>20+</h1>
@@ -90,34 +128,46 @@
             </div>
           </div>
         </div>
-        <img src="./img/phone.png" alt="phone" />
+        <div class="grid place-items-center">
+          <img
+            src="./img/img-2.png"
+            class="absolute z-0 w-1/2 top-[20%] tab:top-[50%] tab:w-[85%]"
+          />
+          <img src="./img/phone.png" class="z-[1]" alt="phone" />
+        </div>
       </div>
     </section>
     <div
-      class="header__partner flex justify-center gap-8 bg-[#31394f] rounded-lg py-[4rem] px[6.4rem]"
+      class="header__partner flex justify-center gap-8 bg-[#31394f] rounded-lg py-[4rem] px[6.4rem] tab:px-[2rem] tab:py-[2rem]"
     >
       <span
         class="text-[#cdcfd3] text-[1.6rem] relative bg-[#31394f] rounded-md"
         >PARTNERS</span
       >
       <picture
-        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center"
+        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center tab:w-1/2"
       >
         <img class="w-[16rem] h-[4rem]" src="./img/hotbit.png" />
       </picture>
       <picture
-        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center"
+        class="p-[2rem] bg-[#353543] rounded-md w-1/4 grid place-items-center tab:w-1/2"
       >
         <img class="w-[16rem] h-[4rem]" src="./img/bkex.png" />
       </picture>
     </div>
 
     <section
-      class="about flex items-center gap-16 justify-center py-[22rem]"
+      class="about flex items-center gap-16 justify-center py-[22rem] tab:flex tab:flex-col-reverse phone:py-6 load"
       id="about"
     >
-      <video src="./" class="p-12 w-1/2 rounded-3xl" controls></video>
-      <div class="flex flex-col items-start justify-center w-1/2 gap-8">
+      <video
+        src="./"
+        class="p-12 w-1/2 rounded-3xl tab:w-full"
+        controls
+      ></video>
+      <div
+        class="flex flex-col items-start justify-center w-1/2 gap-8 tab:items-center tab:text-center tab:w-full"
+      >
         <h1 class="text-bcvGreen text-[2rem]">ABOUT US</h1>
         <h2 class="text-white text-[3.6rem]">WHAT IS BDCV22?</h2>
         <p class="text-bcvGray text-[2rem] leading-10">
@@ -134,9 +184,9 @@
       <div class="flex flex-col justify-center items-center col-start-2">
         <h2 class="text-bcvGreen text-[2rem]">FEATURES</h2>
         <h1 class="text-white text-[3.6rem] mb-36">OUR KEY FEATURE</h1>
-        <div class="flex justify-between gap-8">
+        <div class="flex justify-between gap-8 tab:flex-col tab:gap-32">
           <div
-            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+            class="card down-up delay50 rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between transition-all"
           >
             <div
               class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
@@ -154,7 +204,7 @@
             <button class="text-white text-[1.6rem]">See Details &rarr;</button>
           </div>
           <div
-            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+            class="card down-up delay150 transition-all delay-100 rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
           >
             <div
               class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
@@ -172,7 +222,7 @@
             <button class="text-white text-[1.6rem]">See Details &rarr;</button>
           </div>
           <div
-            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+            class="card down-up delay200 transition-all delay-150 rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
           >
             <div
               class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
@@ -188,7 +238,7 @@
             <button class="text-white text-[1.6rem]">See Details &rarr;</button>
           </div>
           <div
-            class="card rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
+            class="card down-up delay250 transition-all delay-200 rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
           >
             <div
               class="icon p-8 rotate-45 bg-[#282833] grid place-items-center rounded-2xl -mt-28 border border-gray-600"
@@ -206,11 +256,16 @@
         </div>
       </div>
     </section>
-    <section class="team flex flex-col items-center pt-20 pb-[20rem]" id="team">
+    <section
+      class="team flex flex-col items-center pt-20 pb-[20rem] load"
+      id="team"
+    >
       <h2 class="text-bcvGreen text-[2rem]">TEAM</h2>
       <h1 class="text-white text-[3.6rem] mb-36">MEET OUR TEAM</h1>
 
-      <div class="flex justify-between gap-8 [&>*]:w-1/4">
+      <div
+        class="flex justify-between gap-8 [&>*]:w-1/4 [&>*]:tab:w-full tab:grid tab:grid-cols-2 phone:flex phone:flex-col"
+      >
         <div
           class="rounded-3xl bg-[#343443] p-12 text-center gap-8 flex flex-col items-center justify-between"
         >
@@ -318,7 +373,9 @@
         <h2 class="text-bcvGreen text-[2rem]">VISION</h2>
         <h1 class="text-white text-[3.6rem] mb-36">ROADMAP</h1>
 
-        <div class="roadmap-cards flex items-start justify-center [&>*]:w-1/4">
+        <div
+          class="roadmap-cards flex items-start justify-center [&>*]:w-1/4 tab:flex-col tab:[&>*]:w-full tab:[&>*]:border-l tab:[&>*]:border-t-0"
+        >
           <div
             class="q border-t-2 border-bcvGreen flex flex-col justify-end items-center"
           >
@@ -328,10 +385,12 @@
             >
               <span class="text-bcvGray text-[1.4rem]">YYYY-MM-DD</span>
               <h1 class="text-white text-[2rem]">Q1</h1>
-              <ul class="text-[1.8rem] text-bcvGray list-disc">
-                <li>Marketing , product development , partnership</li>
-                <li>Google play app release</li>
-              </ul>
+              <div>
+                <ul class="text-[1.8rem] text-bcvGray list-disc list-inside">
+                  <li>Marketing , product development , partnership</li>
+                  <li>Google play app release</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div
@@ -341,12 +400,14 @@
             <div class="box border w-[90%] border-bcvGray p-[3rem] rounded-2xl">
               <span class="text-bcvGray text-[1.4rem]">YYYY-MM-DD</span>
               <h1 class="text-white text-[2rem]">Q2</h1>
-              <ul class="text-[1.8rem] text-bcvGray list-disc">
-                <li>
-                  Fair launch , Market Making , Hotbit , Bkex Listed And prepare
-                  for Top tire exchange
-                </li>
-              </ul>
+              <div>
+                <ul class="text-[1.8rem] text-bcvGray list-inside list-disc">
+                  <li>
+                    Fair launch , Market Making , Hotbit , Bkex Listed And
+                    prepare for Top tire exchange
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div
@@ -356,9 +417,11 @@
             <div class="box border w-[90%] border-bcvGray p-[3rem] rounded-2xl">
               <span class="text-bcvGray text-[1.4rem]">YYYY-MM-DD</span>
               <h1 class="text-white text-[2rem]">Q3</h1>
-              <ul class="text-[1.8rem] text-bcvGray list-disc">
-                <li>Own NFT Launch With Apple and windows app</li>
-              </ul>
+              <div>
+                <ul class="text-[1.8rem] text-bcvGray list-disc list-inside">
+                  <li>Own NFT Launch With Apple and windows app</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div
@@ -368,12 +431,14 @@
             <div class="box border w-[90%] border-bcvGray p-[3rem] rounded-2xl">
               <span class="text-bcvGray text-[1.4rem]">YYYY-MM-DD</span>
               <h1 class="text-white text-[2rem]">Q4</h1>
-              <ul class="text-[1.8rem] text-bcvGray list-disc">
-                <li>
-                  Release our Play to earn 3D Firming game , Racing Game and
-                  etc.
-                </li>
-              </ul>
+              <div>
+                <ul class="text-[1.8rem] list-inside text-bcvGray list-disc">
+                  <li>
+                    Release our Play to earn 3D Firming game , Racing Game and
+                    etc.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -383,10 +448,12 @@
     <section class="faq flex flex-col items-center pt-20 pb-[20rem]" id="faq">
       <h2 class="text-bcvGreen text-[2rem]">QUESTIONS</h2>
       <h1 class="text-white text-[3.6rem] mb-36">HAVE ANY QUESTION?</h1>
-      <div class="faq__box flex flex-col gap-4 w-1/2 [&>*>img]:w-[2.4rem]">
+      <div
+        class="faq__box flex flex-col gap-4 w-1/2 [&>*>img]:w-[2.4rem] tab:w-[85%] phone:w-full"
+      >
         <label
           for="faq1"
-          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer"
+          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer left-to-right delay50"
         >
           <input
             type="checkbox"
@@ -414,7 +481,7 @@
         </label>
         <label
           for="faq2"
-          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer"
+          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer left-to-right delay100"
         >
           <input
             type="checkbox"
@@ -440,7 +507,7 @@
         </label>
         <label
           for="faq3"
-          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer"
+          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer left-to-right delay150"
         >
           <input
             type="checkbox"
@@ -466,7 +533,7 @@
         </label>
         <label
           for="faq4"
-          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer"
+          class="grid grid-cols-faq items-center justify-items-start py-6 border-b border-[#4b5563] cursor-pointer left-to-right delay200"
         >
           <input
             type="checkbox"
@@ -496,8 +563,10 @@
     </section>
 
     <footer class="layout bg-[#222737]">
-      <div class="flex gap-12 col-start-2">
-        <div class="flex flex-col gap-10 w-1/2 py-20">
+      <div class="flex gap-12 col-start-2 phone:flex-col-reverse phone:gap-4">
+        <div
+          class="flex flex-col gap-10 w-1/2 py-20 phone:w-full phone:py-4 phone:pt-0"
+        >
           <h1 class="text-[3.6rem] text-white">Contact Us</h1>
           <p class="text-bcvGray text-[1.8rem]">
             We are always open and we welcome and questions you have for our
@@ -515,7 +584,9 @@
           </div>
         </div>
         <!--  -->
-        <form class="grid grid-cols-2 w-1/2 py-20 gap-5">
+        <form
+          class="grid grid-cols-2 w-1/2 py-20 gap-5 phone:w-full phone:py-10"
+        >
           <div class="form__box flex flex-col items-start text-[1.8rem] gap-4">
             <label class="text-[#cdcfd3]">Your Name </label>
             <input
@@ -594,6 +665,27 @@
           }
         });
       });
+
+      const checkbox = document.querySelector(".check-navbar");
+      const navList = document.querySelector("#nav-list");
+
+      checkbox.addEventListener("change", function () {
+        if (this.checked) {
+          navList.style = "transform : scaleX(1)";
+        } else {
+          navList.style = "transform : scaleX(0)";
+        }
+      });
+
+      const lis = document.querySelectorAll("li");
+      for (const child of lis) {
+        child.addEventListener("click", () => {
+          if (document.querySelector(".check-navbar").checked) {
+            document.querySelector(".check-navbar").checked = false;
+            navList.style = "transform : scaleX(0)";
+          }
+        });
+      }
     </script>
   </body>
 </html>

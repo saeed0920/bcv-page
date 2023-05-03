@@ -10,12 +10,7 @@
 
 <h1> Step by step! </h1>
 
-> basic style
-
-> responsive
-
-> animation
-
-> - font-family
+> - animation
 > - font-weight
-> - link of telegram or ...
+
+live-page: [Link](https://saeed0920.github.io/bcv-page/).

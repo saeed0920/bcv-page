@@ -1,7 +1,14 @@
 .layout {
   display: grid;
-  grid-template-columns: 1fr 70% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   grid-column: 1 / -1;
+
+  @include breakpoint(93.75em) {
+    grid-template-columns: 1fr 70% 1fr;
+  }
+  @include breakpoint(56.25em) {
+    grid-template-columns: 1fr 90% 1fr;
+  }
 }
 
 .header__partner {
@@ -36,6 +43,19 @@
     background-color: rgb(101, 230, 207);
     border-radius: 200vmax;
   }
+  &:first-child {
+    @include breakpoint(900px) {
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(101, 230, 207);
+        width: 50%;
+        left: 0;
+        top: 0;
+        height: 1px;
+      }
+    }
+  }
 }
 .q-gray {
   &::after {
@@ -58,6 +78,16 @@ li {
       background-color: #65e6cf;
       position: absolute;
       border-radius: 50%;
+      @include breakpoint(900px) {
+        display: none;
+      }
     }
   }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-2;
 }

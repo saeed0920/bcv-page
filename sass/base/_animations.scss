@@ -1,1 +1,65 @@
 /* animation */
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-8rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes to-up {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(1rem);
+    opacity: 1;
+  }
+}
+
+.load {
+  animation: load 2s ease-out forwards;
+}
+.down-up {
+  animation: to-up 1s forwards ease-in;
+}
+
+.left-to-right {
+  animation: left-to-right 1s ease-in;
+}
+.delay50 {
+  animation-delay: 50ms;
+}
+.delay100 {
+  animation-delay: 100ms;
+}
+.delay150 {
+  animation-delay: 150ms;
+}
+.delay200 {
+  animation-delay: 200ms;
+}
+.delay250 {
+  animation-delay: 250ms;
+}
+.delay300 {
+  animation-delay: 300ms;
+}
+
+.opacity-100,
+.translate-y-o {
+  opacity: 1;
+  transform: translateY(0rem);
+}
