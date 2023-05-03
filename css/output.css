@@ -692,6 +692,10 @@ video {
   width: 100%;
 }
 
+.w-\[49\%\]{
+  width: 49%;
+}
+
 .origin-right{
   transform-origin: right;
 }

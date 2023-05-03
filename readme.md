@@ -1,11 +1,11 @@
-# BCV page
+l# BCV page
 
 <h2>Simple page with tailwindcss!</h2>
 
 ```
 >npm start
 
->npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+>npx tailwindcss -i ./css/style.css -o ./css/output.css --watch
 ```
 
 <h1> Step by step! </h1>
